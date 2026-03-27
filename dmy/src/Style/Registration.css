@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.page {
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 140px;
+    height: auto;
+    z-index: 1000;
+
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(3deg);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.7));
+}
+
+.farmer{
+    position: fixed;
+    top: 230px;
+    left: 150px;
+    width: 250px;
+    height: auto;
+    z-index: 1000;
+    border-radius: 30px;
+}
+.quote{
+    position: fixed;
+    display: flex;
+    top: 400px;
+    left: 100px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 280px;
+    height: auto;
+    color: #333;
+    font-style: italic; 
+}
+
+.headerL {
+    color: #9a8f8f;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    transition:
+        color 0.4s ease,
+        transform 0.3s ease;
+}
+
+.headerL:hover {
+    transform: scale(1.03);
+}
+.role-section{
+    display: flex;
+}
+
+.formL {
+    width: 360px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.8s ease;
+    transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+.formL:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+.formL input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.formL input:hover,
+.formL input:focus {
+    outline: none;
+    border-color: #4e999f;
+    box-shadow: 0 0 10px #4e999f;
+    transform: scale(1.02);
+}
+.formL button {
+    width: 100%;
+    padding: 14px;
+    background-color: #4e999f;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    transition:
+    background 0.4s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.formL button:hover {
+    background-color: #4e999f;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+.formL p {
+    margin-top: 18px;
+    font-size: 14px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
