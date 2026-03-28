@@ -1,0 +1,147 @@
+/* Page Background */
+.add-product-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;   /* FIX: prevents jumping */
+  padding-top: 40px;         /* space from top */
+  padding-bottom: 40px;
+  background: linear-gradient(135deg, #e8f5e9, #ffffff);
+}
+
+/* Card */
+.add-product-card {
+  width: 750px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.input-group input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Add Button */
+.submit-btn {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #1b5e20;
+}
+
+/* Product List */
+.product-list {
+  margin-top: 30px;
+}
+
+/* Table */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.product-table th {
+  background-color: #2e7d32;
+  color: white;
+  padding: 12px;
+}
+
+.product-table td {
+  padding: 12px;
+  text-align: center;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #ddd;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Edit Button */
+.edit-btn {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #0d47a1;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #b71c1c;
+}
+
+/* Sold Button */
+.sold-btn {
+  background-color: #fbc02d;
+  color: #333;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.sold-btn:hover {
+  background-color: #f9a825;
+}

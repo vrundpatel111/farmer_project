@@ -1,0 +1,92 @@
+.meeting-container{
+    max-width:700px;
+    margin:30px auto;
+    padding:20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Title at top */
+.meeting-title{
+    text-align:center;
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:30px;
+    color:#1f3d2b;
+}
+
+/* No meeting text */
+.no-meeting{
+    text-align:center;
+    font-size:20px;
+    color:#777;
+}
+
+/* Meeting Card */
+.meeting-card{
+    background:#e8f5e9; /* light green background */
+    border-radius:12px;
+    padding:25px;
+    margin-bottom:20px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.12);
+    transition:transform 0.2s, box-shadow 0.2s;
+}
+
+.meeting-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.18);
+}
+
+/* Meeting Text */
+.meeting-text{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:12px;
+    color:#2c3e50;
+}
+
+/* Time text */
+.meeting-time{
+    font-size:18px;
+    color:#444;
+    margin-bottom:18px;
+}
+
+/* Buttons container */
+.meeting-actions{
+    display:flex;
+    gap:15px;
+}
+
+/* Accept Button */
+.accept-btn{
+    background:#2ecc71;
+    color:white;
+    border:none;
+    padding:10px 22px;
+    font-size:17px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.2s;
+}
+
+.accept-btn:hover{
+    background:#27ae60;
+}
+
+/* Reject Button */
+.reject-btn{
+    background:#e74c3c;
+    color:white;
+    border:none;
+    padding:10px 22px;
+    font-size:17px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.2s;
+}
+
+.reject-btn:hover{
+    background:#c0392b;
+}
