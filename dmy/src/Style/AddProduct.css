@@ -21,7 +21,7 @@
 /* Title */
 .title {
   text-align: center;
-  color: #2e7d32;
+  color: #0F172A;
   margin-bottom: 20px;
 }
 
@@ -55,7 +55,7 @@
 .submit-btn {
   margin-top: 10px;
   padding: 12px;
-  background-color: #2e7d32;
+  background-color: #0F172A;
   color: white;
   border: none;
   border-radius: 6px;
@@ -65,7 +65,7 @@
 }
 
 .submit-btn:hover {
-  background-color: #1b5e20;
+  background-color: #0F172A;
 }
 
 /* Product List */
@@ -81,7 +81,7 @@
 }
 
 .product-table th {
-  background-color: #2e7d32;
+  background-color: #0F172A;
   color: white;
   padding: 12px;
 }
