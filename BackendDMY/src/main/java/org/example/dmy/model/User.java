@@ -30,6 +30,6 @@ public class User {
     private UserRole role;
 
     private String address;
-
     private String profilePic;
+    private String description;
 }

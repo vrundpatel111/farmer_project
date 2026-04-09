@@ -9,11 +9,10 @@ import BusinessDashboard from './Component/Dashboard/Businessman/BusinessmanHome
 import TransporterDashboard from './Component/Dashboard/Transporter/TransporterHomepage';
 
 import AddProduct from './Component/Dashboard/Farmer/AddProduct';
-import PendingOrders from './Component/Dashboard/Farmer/PendingOrders'; 
 import Profile from './Component/Common/Profile';
-import MeetingPanel from './Component/Common/MeetingPanel';
 import SeeProfile from './Component/Common/SeeProfile';
 import ProductDetail from './Component/Dashboard/Farmer/ProductDetail';
+import NotificationCenter from './Component/Common/NotificationCenter';
 import MyVehicle from './Component/Dashboard/Transporter/MyVehicle';
 import AssignedVehicle from './Component/Dashboard/Transporter/AssignedVehicle';
 import TrackVehicle from './Component/Dashboard/Transporter/TrackVehicle';
@@ -31,8 +30,9 @@ function App() {
         {/* Farmer Routes */}
         <Route path="/farmer-dashboard" element={<FarmerDashboard />} />
         <Route path="/add-product" element={<AddProduct />} />
-        <Route path="/meeting" element={<MeetingPanel />} />
-        <Route path="/pending-orders" element={<PendingOrders />} />
+        <Route path="/meeting" element={<NotificationCenter />} />
+        <Route path="/notifications" element={<NotificationCenter />} />
+        <Route path="/pending-orders" element={<NotificationCenter />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/product-detail/:id" element={<ProductDetail />} />
         <Route path="/product-detail" element={<ProductDetail />} />

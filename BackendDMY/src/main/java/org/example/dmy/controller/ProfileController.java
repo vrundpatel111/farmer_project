@@ -50,15 +50,29 @@ public class ProfileController {
     public User updateProfile(@PathVariable Long userId,
                               @RequestParam(value = "username", required = false) String username,
                               @RequestParam(value = "address", required = false) String address,
+                              @RequestParam(value = "description", required = false) String description,
                               @RequestParam(value = "image", required = false) MultipartFile image) throws Exception {
         
+        System.out.println("Updating profile for user ID: " + userId);
+        System.out.println("New description received: " + description);
+
         User user = userRepository.findById(userId).orElseThrow();
+        
         if (username != null) user.setUsername(username);
         if (address != null) user.setAddress(address);
+        
+        // Update description even if it's an empty string (but not null)
+        if (description != null) {
+            user.setDescription(description);
+        }
+        
         if (image != null && !image.isEmpty()) {
             String fileName = fileStorageService.storeFile(image);
             user.setProfilePic(fileName);
         }
-        return userRepository.save(user);
+        
+        User savedUser = userRepository.save(user);
+        System.out.println("Saved description: " + savedUser.getDescription());
+        return savedUser;
     }
 }

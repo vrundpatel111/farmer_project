@@ -39,9 +39,26 @@ const Navbar = ({ search, setSearch }) => {
   return (
     <nav className="navbar">
       <div className="nav-left">
-        <button className="meeting-btn-navbar">
-          <Link to="/meeting">Meeting</Link>
-        </button>
+        <Link to="/notifications" className="notification-icon-wrapper" style={{ position: 'relative', textDecoration: 'none', fontSize: '24px', marginLeft: '15px' }}>
+          🔔
+          {notifCount > 0 && (
+            <span style={{ 
+              position: 'absolute', 
+              top: '-5px', 
+              right: '-8px', 
+              backgroundColor: 'red', 
+              color: 'white', 
+              borderRadius: '50%', 
+              padding: '2px 6px', 
+              fontSize: '12px', 
+              fontWeight: 'bold',
+              border: '2px solid white',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+            }}>
+              {notifCount}
+            </span>
+          )}
+        </Link>
       </div>
 
       <div className="nav-right">
@@ -74,10 +91,6 @@ const Navbar = ({ search, setSearch }) => {
             <button><Link to="/track-vehicle">Track My Vehicle</Link></button>
           </>
         )}
-
-        <button><Link to="/pending-orders">
-          Pending Meeting {notifCount > 0 && <span style={{ backgroundColor: 'red', color: 'white', borderRadius: '50%', padding: '2px 6px', fontSize: '10px', marginLeft: '5px' }}>{notifCount}</span>}
-        </Link></button>
 
         <div className="profile-btn">
           <Link to="/profile">

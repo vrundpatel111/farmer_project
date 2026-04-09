@@ -37,6 +37,8 @@ export const Login = () => {
 
             localStorage.setItem("user", JSON.stringify(loggedInUser));
             localStorage.setItem("userId", loggedInUser.id);
+            localStorage.setItem("role", loggedInUser.role);
+            localStorage.setItem("username", loggedInUser.username);
 
             switch (loggedInUser.role) {
                 case "FARMER": navigate("/farmer-dashboard"); break;
