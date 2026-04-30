@@ -34,11 +34,12 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
         String allowedOrigins = System.getenv("ALLOWED_ORIGINS");
         if (allowedOrigins == null || allowedOrigins.isEmpty()) {
-            configuration.setAllowedOrigins(Arrays.asList(
+            configuration.setAllowedOriginPatterns(Arrays.asList(
                     "http://localhost:3000",
-                    "https://farmer-project-xi.vercel.app"));
+                    "https://farmer-project-xi.vercel.app",
+                    "https://*.vercel.app"));
         } else {
-            configuration.setAllowedOrigins(Arrays.asList(allowedOrigins.split(",")));
+            configuration.setAllowedOriginPatterns(Arrays.asList(allowedOrigins.split(",")));
         }
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
