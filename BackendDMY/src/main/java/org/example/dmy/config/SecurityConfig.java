@@ -19,13 +19,12 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .cors(Customizer.withDefaults())
-            .csrf(csrf -> csrf.disable())
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/**", "/products/**", "/vehicles/**", "/uploads/**").permitAll()
-                .anyRequest().authenticated()
-            )
-            .httpBasic(Customizer.withDefaults()); // or just formLogin().disable()
+                .cors(Customizer.withDefaults())
+                .csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/api/**", "/products/**", "/vehicles/**", "/uploads/**").permitAll()
+                        .anyRequest().authenticated())
+                .httpBasic(Customizer.withDefaults()); // or just formLogin().disable()
 
         return http.build();
     }
@@ -35,7 +34,9 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
         String allowedOrigins = System.getenv("ALLOWED_ORIGINS");
         if (allowedOrigins == null || allowedOrigins.isEmpty()) {
-            configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000"));
+            configuration.setAllowedOrigins(Arrays.asList(
+                    "http://localhost:3000",
+                    "https://farmer-project-xi.vercel.app"));
         } else {
             configuration.setAllowedOrigins(Arrays.asList(allowedOrigins.split(",")));
         }
